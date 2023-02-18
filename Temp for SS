@@ -17,6 +17,7 @@ _3_.Parent = _2_
 _3_.BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)
 _3_.BackgroundTransparency = 0.4000000059604645
 _3_.BorderSizePixel = 0
+_3_.ClearTextOnFocus = false
 _3_.Font = Enum.Font.SourceSans
 _3_.PlaceholderText = "Script"
 _3_.Position = UDim2.new(-2.48765573e-05, 0, 0.446564883, 0)
@@ -158,10 +159,6 @@ _11_.Color = ColorSequence.new{
     ColorSequenceKeypoint.new(1, Color3.fromRGB(0,0,0))
 }
 
-_12_ = Instance.new("Script")
-_12_.Parent = game:GetService("ServerScriptService")
-_12_.Source = [[
-_G.Player.PlayerGui.SS.Frame.Exe.MouseButton1Click:Connect(function()
-    loadstring(tostring(_G.Player.PlayerGui.SS.Frame.TextBox.Text))()
+_4_.MouseButton1Click:Connect(function()
+    loadstring(tostring(_3_.Text))()
 end)
-]]
